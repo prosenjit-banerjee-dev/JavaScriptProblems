@@ -37,6 +37,9 @@ function mostFrequentElement(array) {
   }
   return mostFrequentElement;
 }
+const example03 =  [3, 5, 2, 5, 3, 3, 1, 4, 5];
+const output03 = mostFrequentElement(example03);
+console.log(output03);
 
 // Problem 04
 function findTwoNumbers(arr, target) {
@@ -49,24 +52,27 @@ function findTwoNumbers(arr, target) {
   }
   return [];
 }
+
 // Problem 05
 function calculator(num1, operator, num2) {
   switch (operator) {
-    case '+':
+    case "+":
       return num1 + num2;
-    case '-':
+    case "-":
       return num1 - num2;
-    case '*':
+    case "*":
       return num1 * num2;
-    case '/':
+    case "/":
       return num1 / num2;
     default:
       return "Invalid operator";
   }
 }
+
 // Problem 06
 function generateRandomPassword(length) {
-  let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+";
+  let characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+";
   let password = "";
   for (let i = 0; i < length; i++) {
     let character = characters[Math.floor(Math.random() * characters.length)];
@@ -76,7 +82,6 @@ function generateRandomPassword(length) {
 
   return password;
 }
-
 
 // Problem 07
 function romanToInt(roman) {
@@ -101,6 +106,7 @@ function romanToInt(roman) {
 
   return result;
 }
+
 // Problem 08
 function secondSmallestElement(array) {
   array.sort((a, b) => a - b);
