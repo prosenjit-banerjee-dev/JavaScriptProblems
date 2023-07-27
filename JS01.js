@@ -49,4 +49,60 @@ function findTwoNumbers(arr, target) {
   }
   return [];
 }
+// Problem 05
+function calculator(num1, operator, num2) {
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    case '/':
+      return num1 / num2;
+    default:
+      return "Invalid operator";
+  }
+}
+// Problem 06
+function generateRandomPassword(length) {
+  let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+";
+  let password = "";
+  for (let i = 0; i < length; i++) {
+    let character = characters[Math.floor(Math.random() * characters.length)];
 
+    password += character;
+  }
+
+  return password;
+}
+
+
+// Problem 07
+function romanToInt(roman) {
+  const romanNumbers = {
+    I: 1,
+    V: 5,
+    X: 10,
+  };
+  let result = 0;
+
+  for (let i = 0; i < roman.length; i++) {
+    const currentVal = romanNumbers[roman[i]];
+    const nextVal = romanNumbers[roman[i + 1]];
+
+    if (nextVal > currentVal) {
+      result += nextVal - currentVal;
+      i++;
+    } else {
+      result += currentVal;
+    }
+  }
+
+  return result;
+}
+// Problem 08
+function secondSmallestElement(array) {
+  array.sort((a, b) => a - b);
+  return array[1];
+}
